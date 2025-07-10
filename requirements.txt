@@ -1,0 +1,9 @@
+pandas
+langchain_community
+unstructured
+openpyxl
+langchain-huggingface
+sentence-transformers
+faiss-cpu
+langchain-groq
+streamlit
