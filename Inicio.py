@@ -74,12 +74,12 @@ Resposta:
 rag_prompt = ChatPromptTemplate.from_template(RAG_TEMPLATE)
 chain = LLMChain(prompt=rag_prompt, llm=llm)
 
-st.write("# Bem vindo ao UASTChat! 👋🤖")
+st.write("# Bem vindo ao SIChat! 👋🤖")
 
 st.markdown(
     """
     Este aplicativo é um protótipo de chatbot construído com a finalidade de ajudar os alunos do
-    curso de SI com dúvidas sobre horas complementares. As informações do aplicativo se baseia no Barema
+    curso de Sistemas de Informação da UAST com dúvidas sobre horas complementares. As informações do aplicativo se baseia no Barema
     do curso, que se encontra nesse link 👉 [BaremaSI](https://drive.google.com/file/d/1pnCOoWsIIywgsL0OZFH56RgeC6PvAi70/view?usp=sharing)
     Obrigado!
     """
