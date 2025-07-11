@@ -13,6 +13,7 @@ from langchain_community.docstore.document import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 import os
+from langchain_pinecone import PineconeEmbeddings
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from langchain.chains import LLMChain
@@ -38,7 +39,8 @@ for _, row in df.iterrows():
     }
     docs.append(Document(page_content=conteudo, metadata=metadata))
 
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+# embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+embeddings = PineconeEmbeddings(model="multilingual-e5-large")
 
 vectorstore = FAISS.from_documents(docs, embeddings)
 
